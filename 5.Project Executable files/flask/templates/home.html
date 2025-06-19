@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Payment Fraud Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6fb;
+            color: #222;
+        }
+        header {
+            background: #1a237e;
+            color: #fff;
+            padding: 24px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(26,35,126,0.08);
+        }
+        header img {
+            height: 60px;
+            vertical-align: middle;
+            margin-right: 16px;
+        }
+        header h1 {
+            display: inline-block;
+            font-size: 2.2rem;
+            margin: 0;
+            vertical-align: middle;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(60,72,88,0.10);
+            padding: 40px 32px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .content {
+            flex: 1;
+        }
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+            color: #1a237e;
+        }
+        .content p {
+            font-size: 1.1rem;
+            margin-bottom: 28px;
+            color: #444;
+        }
+        .content .btn {
+            background: #3949ab;
+            color: #fff;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .content .btn:hover {
+            background: #283593;
+        }
+        .main-img {
+            flex: 1;
+            text-align: center;
+        }
+        .main-img img {
+            max-width: 320px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(60,72,88,0.12);
+        }
+        footer {
+            background: #1a237e;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0;
+            margin-top: 60px;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+                padding: 24px 12px;
+                gap: 24px;
+            }
+            .main-img img {
+                max-width: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/security-checked.png" alt="Fraud Detection Logo">
+        <h1>Online Payment Fraud Detection</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Protect Your Transactions with AI</h2>
+            <p>
+                Our advanced machine learning model helps you detect and prevent fraudulent online payments in real-time. 
+                Secure your business and customers with state-of-the-art fraud detection technology.
+            </p>
+            <a href="/predict" class="btn">Get Started</a>
+        </div>
+        <div class="main-img">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Secure Payment">
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Online Payment Fraud Detection. All rights reserved.
+    </footer>
+</body>
+</html>

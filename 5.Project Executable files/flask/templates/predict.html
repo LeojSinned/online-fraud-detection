@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Payment Fraud Detection - Predict</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255,255,255,0.92);
+            max-width: 420px;
+            margin: 60px auto;
+            padding: 32px 36px 28px 36px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 28px;
+            color: #2d3a4b;
+            letter-spacing: 1px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #34495e;
+            font-weight: 500;
+        }
+        input, select {
+            width: 100%;
+            padding: 9px 10px;
+            border: 1px solid #bfc9d1;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #f8fafc;
+            transition: border 0.2s;
+        }
+        input:focus, select:focus {
+            border-color: #5b9bd5;
+            outline: none;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #5b9bd5;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background: #4178be;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Fraud Detection Prediction</h2>
+        <form action="/pred" method="post">
+            <div class="form-group">
+                <label for="step">Step</label>
+                <input type="number" id="step" name="step" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Type</label>
+                <select id="type" name="type" required>
+                    <option value="">Select type</option>
+                    <option value="CASH_IN">CASH_IN</option>
+                    <option value="CASH_OUT">CASH_OUT</option>
+                    <option value="DEBIT">DEBIT</option>
+                    <option value="PAYMENT">PAYMENT</option>
+                    <option value="TRANSFER">TRANSFER</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" step="0.01" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="oldbalanceOrg">Old Balance Origin</label>
+                <input type="number" id="oldbalanceOrg" name="oldbalanceOrg" step="0.01" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="newbalanceOrig">New Balance Origin</label>
+                <input type="number" id="newbalanceOrig" name="newbalanceOrig" step="0.01" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="oldbalanceDest">Old Balance Destination</label>
+                <input type="number" id="oldbalanceDest" name="oldbalanceDest" step="0.01" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="newbalanceDest">New Balance Destination</label>
+                <input type="number" id="newbalanceDest" name="newbalanceDest" step="0.01" min="0" required>
+            </div>
+            <button type="submit" class="submit-btn">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
